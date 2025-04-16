@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intelligence Analysis Dashboard</title>
+    <!-- Include D3.js or other visualization libraries -->
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <!-- Include custom CSS for styling -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Intelligence Analysis Dashboard</h1>
+    </header>
+    <main>
+      <section id="filter-section">
+        <h2>Filters</h2>
+        <label for="date-filter">Date Range:</label>
+        <input type="date" id="date-filter-start" />
+        <input type="date" id="date-filter-end" />
+        <label for="place-filter">Suspect:</label>
+        <input type="text" id="place-filter" />
+        <label for="doc-type-filter">Document Type:</label>
+        <select id="doc-type-filter">
+          <option value="all">All</option>
+          <option value="CIA">CIA</option>
+          <option value="NSA">NSA</option>
+          <option value="FBI">FBI</option>
+          <option value="USCBP">USCB</option>
+          <option value="DIA">DIA</option>
+        </select>
+        <button id="apply-filters">Apply Filters</button>
+        <button id="show-frequent-persons-btn">
+          Show Highly Mentioned People
+        </button>
+        <button id="show-graph-btn">Show Incidents Graph</button>
+      </section>
+      <div id="frequent-persons"></div>
+      <div id="reports"></div>
+      <div id="graph-container"></div>
+    </main>
+    <footer>
+      <p>Intelligence Analysis Dashboard for Operational Support</p>
+    </footer>
+
+    <!-- Include custom JavaScript for interactive features -->
+    <script src="dashboard.js"></script>
+  </body>
+</html>
